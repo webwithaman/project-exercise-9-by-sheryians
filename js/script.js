@@ -1,18 +1,23 @@
-// Get Elements
-let addBtn = document.querySelector("#add-btn");
-let inputField = document.querySelector("input");
-let itemsContainer = document.querySelector(".items-container");
+let displayArea = document.querySelector(".display-area");
 
-// Adding Click Event on Add Button to Add Items
-addBtn.onclick = () => {
-  // Create li Element
-  let li = document.createElement("li");
+document.querySelectorAll(".btn").forEach((element) => {
+  element.addEventListener("click", (e) => {
+    let btnAttValue = e.currentTarget.getAttribute("data-key");
 
-  // If Input Field is Non-Empty then Append li to Items Container
-  if (inputField.value) {
-    if (!itemsContainer.firstElementChild) itemsContainer.innerHTML = "";
-    li.innerHTML = inputField.value;
-    inputField.value = "";
-    itemsContainer.appendChild(li);
-  }
-};
+    if (btnAttValue == "clear") displayArea.value = "";
+    else if (btnAttValue == "delete")
+      displayArea.value = displayArea.value.slice(
+        0,
+        displayArea.value.length - 1
+      );
+    else if (btnAttValue == "=") {
+      if (displayArea.value == "") return;
+      let exp = displayArea.value.replaceAll("x", "*");
+      try {
+        displayArea.value = math.evaluate(exp);
+      } catch (error) {
+        console.error("Invalid Expression", e.error);
+      }
+    } else displayArea.value += btnAttValue;
+  });
+});
