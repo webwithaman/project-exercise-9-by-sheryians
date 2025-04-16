@@ -1,5 +1,7 @@
+// Get Element
 let displayArea = document.querySelector(".display-area");
 
+// Get All Buttons and Add Click Event
 document.querySelectorAll(".btn").forEach((element) => {
   element.addEventListener("click", (e) => {
     let btnAttValue = e.currentTarget.getAttribute("data-key");
