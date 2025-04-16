@@ -8,4 +8,4 @@
 
 ### Live Demo
 
-You see a live demo of this project ()
+You see a live demo of this project (https://simple-calculator-by-webwithaman.netlify.app/)
