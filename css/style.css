@@ -1,13 +1,6 @@
 /* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-/* CSS Variables Start */
-:root {
-  /* Theme Fonts */
-  --font-family-2: "Poppins", sans-serif;
-}
-/* CSS Variables End */
-
 /* Reset Default Styles Start */
 *,
 *::before,
@@ -19,8 +12,7 @@
 
 html {
   font-size: 62.5%; /* 1rem = 10px */
-  overflow-x: hidden;
-  font-family: var(--font-family-2);
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -81,7 +73,7 @@ body {
   background-color: #ffffff;
   background-color: #f7f7f7;
   font-size: 2rem;
-  font-family: var(--font-family-2);
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   padding: 1rem;
   letter-spacing: 1.5px;
@@ -97,7 +89,7 @@ body {
 }
 
 .btns-container .btn {
-  font-family: var(--font-family-2);
+  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
